@@ -1,0 +1,44 @@
+@layer components {
+    .timeline-item:nth-child(odd) .timeline-content {
+        @apply md:text-right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        @apply md:text-left;
+    }
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
